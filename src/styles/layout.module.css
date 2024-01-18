@@ -1,0 +1,41 @@
+.container {
+  max-width: 1200px;
+  width: calc(100% - 80px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top-0{
+  top: 0;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.py-32 {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.py-64 {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.py-128 {
+  padding-top: 128px;
+  padding-bottom: 128px;
+}
+
+.pt-32 {
+  padding-top: 32px;
+}

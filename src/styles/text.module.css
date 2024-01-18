@@ -1,0 +1,25 @@
+.align-center {
+  text-align: center;
+}
+
+.title1 {
+  font-size: 6rem;
+}
+
+.title2 {
+  font-size: 3rem;
+}
+
+.subtitle1 {
+  font-size: 2.5rem;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+@media (max-width: 680px) {
+  .title1 {
+    font-size: 5rem;
+  } 
+}
