@@ -3,14 +3,15 @@ import { ComponentProps, PropsWithoutRef, forwardRef } from 'react';
 
 import styles from './styles.module.css';
 
-export interface ButtonProps
-  extends PropsWithoutRef<ComponentProps<'button'>> {}
+export interface ButtonProps extends PropsWithoutRef<ComponentProps<'button'>> {
+  color?: 'grey' | 'blue';
+}
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, ...props }, forwardedRef) => {
+  ({ className, color = 'grey', ...props }, forwardedRef) => {
     return (
       <button
-        className={classNames(styles['button'], className)}
+        className={classNames(styles['button'], styles[color], className)}
         {...props}
         ref={forwardedRef}
       />

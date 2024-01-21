@@ -1,8 +1,16 @@
 .button {
-  background-color: rgba(0,0,0,0.15); 
   outline: none;
   border: none;
   border-radius: 6px;
   padding: 8px 16px;
   cursor: pointer;
+  transition: background-color 300ms;
+}
+
+.grey {
+  background-color: rgb(217, 217, 217);  
+}
+
+.blue {
+  background-color: rgb(217,217,255); 
 }
