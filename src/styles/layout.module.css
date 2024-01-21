@@ -5,6 +5,46 @@
   margin-right: auto;
 }
 
+.dim {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-white-gradient {
+  background: linear-gradient(white, rgba(255,255,255,0));
+}
+
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.z-index-2 {
+  z-index: 2;
+}
+
+.full-width {
+  width: 100%;
+}
+
 .top-0{
   top: 0;
 }
