@@ -4,6 +4,11 @@ html, body {
   line-height: 1;
 }
 
+a {
+  color: initial;
+  text-decoration: initial;
+}
+
 * {
   margin:0;
   padding:0;
