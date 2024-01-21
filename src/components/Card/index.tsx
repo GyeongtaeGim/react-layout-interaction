@@ -1,21 +1,15 @@
-import {
-  MouseEventHandler,
-  PropsWithChildren,
-  ReactNode,
-  forwardRef,
-} from 'react';
+import { PropsWithChildren, ReactNode, forwardRef } from 'react';
 import CardPaper, { CardPaperProps } from './CardPaper';
 import CardTitle from './CardTitle';
 import CardContent from './CardContent';
 import CardAction from './CardAction';
 import CardImage from './CardImage';
-import Button from '../Button';
 
 export interface CardProps {
   title?: ReactNode;
   src?: string;
   alt?: string;
-  onAction?: MouseEventHandler<HTMLButtonElement>;
+  actions?: ReactNode;
   variant?: CardPaperProps['variant'];
   componentProps?: {
     CardPaper: CardPaperProps;
@@ -24,7 +18,7 @@ export interface CardProps {
 
 const Card = forwardRef<HTMLElement, PropsWithChildren<CardProps>>(
   (
-    { title, children, src, alt, onAction, variant, componentProps },
+    { title, children, src, alt, actions, variant, componentProps },
     forwardedRef,
   ) => {
     return (
@@ -36,11 +30,7 @@ const Card = forwardRef<HTMLElement, PropsWithChildren<CardProps>>(
         <CardImage src={src} alt={alt} />
         <CardTitle>{title}</CardTitle>
         <CardContent>{children}</CardContent>
-        {onAction && (
-          <CardAction>
-            <Button>Read More</Button>
-          </CardAction>
-        )}
+        {actions && <CardAction>{actions}</CardAction>}
       </CardPaper>
     );
   },
